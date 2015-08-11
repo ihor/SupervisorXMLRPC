@@ -14,7 +14,6 @@ Define the following requirement in your composer.json file:
 
 Usage
 -----
-#### Composer autoloader
 
 ```php
 $api = new \Supervisor\Api('127.0.0.1', 9001);
