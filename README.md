@@ -1,7 +1,7 @@
 Supervisor
 ==========
 
-PHP XML RPC Client for (Supervisor)[http://supervisord.org]
+PHP XML RPC Client for Supervisor (http://supervisord.org)
 
 Installation
 ------------
