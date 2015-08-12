@@ -37,7 +37,7 @@ class Api
      */
     private function _call($method, array $params = [])
     {
-        if (strpos($method, '.') === -1) {
+        if (strpos($method, '.') === false) {
             $method = 'supervisor.' . $method;
         }
 
