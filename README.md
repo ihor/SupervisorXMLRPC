@@ -8,7 +8,7 @@ Installation
 Define the following requirement in your composer.json file:
 ```
 "require": {
-    "ihor/supervisor": "0.1"
+    "ihor/supervisor": "0.1.1"
 }
 ```
 
