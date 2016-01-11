@@ -12,6 +12,8 @@ Define the following requirement in your composer.json file:
 }
 ```
 
+Also you have to install [PHP XML-RPC extension](http://php.net/manual/en/book.xmlrpc.php).
+
 Usage
 -----
 
