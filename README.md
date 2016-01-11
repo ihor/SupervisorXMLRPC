@@ -16,6 +16,11 @@ Usage
 -----
 
 ```php
-$api = new \Supervisor\Api('127.0.0.1', 9001);
+// Create Supervisor API instance
+$api = new \Supervisor\Api('127.0.0.1', 9001 /* username, password */);
+
+// Call Supervisor API
 $api->getApiVersion();
+
+// That's all!
 ```
