@@ -12,7 +12,7 @@ Define the following requirement in your composer.json file:
 }
 ```
 
-It also requires [PHP XML-RPC extension](http://php.net/manual/en/book.xmlrpc.php).
+Also you have to install [PHP XML-RPC extension](http://php.net/manual/en/book.xmlrpc.php).
 
 Usage
 -----
