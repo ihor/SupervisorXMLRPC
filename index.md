@@ -8,11 +8,11 @@ Installation
 Define the following requirement in your composer.json file:
 ```
 "require": {
-    "ihor/supervisor-xml-rpc": "0.1.x-dev"
+    "ihor/supervisor-xml-rpc": "0.1.x-alpha"
 }
 ```
 
-Also you have to install [PHP XML-RPC extension](http://php.net/manual/en/book.xmlrpc.php).
+It also requires [PHP XML-RPC extension](http://php.net/manual/en/book.xmlrpc.php). The version is marked as alpha because I haven't heard any feedback from other users.
 
 Usage
 -----
