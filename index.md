@@ -1,18 +1,18 @@
 Supervisor
 ==========
 
-PHP XML RPC Client for Supervisor (http://supervisord.org)
+PHP XML RPC Client for [Supervisor](http://supervisord.org)
 
 Installation
 ------------
 Define the following requirement in your composer.json file:
 ```
 "require": {
-    "ihor/supervisor-xml-rpc": "0.1.x-alpha"
+    "ihor/supervisor-xml-rpc": "0.1.x-dev"
 }
 ```
 
-It also requires [PHP XML-RPC extension](http://php.net/manual/en/book.xmlrpc.php). The version is marked as alpha because I haven't heard any feedback from other users.
+It also requires [PHP XML-RPC extension](http://php.net/manual/en/book.xmlrpc.php). The version is marked as dev because I haven't heard any feedback from other users.
 
 Usage
 -----
@@ -38,7 +38,7 @@ This API is versioned separately from Supervisor itself. The API version returne
 
 When writing software that communicates with this API, it is highly recommended that you first test the API version for compatibility before making method calls.  
 
-http://supervisord.org/api.html#supervisor.rpcinterface.SupervisorNamespaceRPCInterface.getAPIVersion
+[getAPIVersion](http://supervisord.org/api.html#supervisor.rpcinterface.SupervisorNamespaceRPCInterface.getAPIVersion)
 
 
 ##### getSupervisorVersion()
