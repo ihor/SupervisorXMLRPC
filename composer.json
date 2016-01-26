@@ -1,6 +1,6 @@
 {
     "name": "ihor/supervisor-xml-rpc",
-    "description": "Simple PHP XML RPC Client for Supervisor (http://supervisord.org)",
+    "description": "Simple Supervisor XML RPC Client in PHP (http://supervisord.org)",
     "keywords": ["supervisor", "xml-rpc", "api", "supervisord", "supervisorctl"],
     "license": "MIT",
     "authors": [
