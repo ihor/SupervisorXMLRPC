@@ -35,7 +35,7 @@ class Api
      * @return array
      * @throws \Exception
      */
-    private function _call($method, array $params = [])
+    protected function _call($method, array $params = [])
     {
         if (strpos($method, '.') === false) {
             $method = 'supervisor.' . $method;
