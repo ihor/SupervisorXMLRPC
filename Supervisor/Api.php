@@ -35,7 +35,7 @@ class Api
      * @return array
      * @throws \Exception
      */
-    protected function _call($method, array $params = [])
+    function __call($method, array $params = [])
     {
         if (strpos($method, '.') === false) {
             $method = 'supervisor.' . $method;
@@ -75,7 +75,7 @@ class Api
      */
     public function getApiVersion()
     {
-        return $this->_call('getAPIVersion');
+        return $this->__call('getAPIVersion');
     }
 
     /**
@@ -86,7 +86,7 @@ class Api
      */
     public function getSupervisorVersion()
     {
-        return $this->_call('getSupervisorVersion');
+        return $this->__call('getSupervisorVersion');
     }
 
     /**
@@ -103,7 +103,7 @@ class Api
      */
     public function getIdentification()
     {
-        return $this->_call('getIdentification');
+        return $this->__call('getIdentification');
     }
 
     /**
@@ -142,7 +142,7 @@ class Api
      */
     public function getState()
     {
-        return $this->_call('getState');
+        return $this->__call('getState');
     }
 
     /**
@@ -153,7 +153,7 @@ class Api
      */
     public function getPid()
     {
-        return $this->_call('getPID');
+        $this->__call('getPID');
     }
 
     /**
@@ -183,7 +183,7 @@ class Api
      */
     public function readLog($offset, $length)
     {
-        return $this->_call('readLog', [$offset, $length]);
+        $this->__call('readLog', [$offset, $length]);
     }
 
     /**
@@ -197,7 +197,7 @@ class Api
      */
     public function clearLog()
     {
-        return $this->_call('clearLog');
+        $this->__call('clearLog');
     }
 
     /**
@@ -213,7 +213,7 @@ class Api
      */
     public function shutdown()
     {
-        return $this->_call('shutdown');
+        $this->__call('shutdown');
     }
 
     /**
@@ -230,7 +230,7 @@ class Api
      */
     public function restart()
     {
-        return $this->_call('restart');
+        $this->__call('restart');
     }
 
     /**
@@ -258,7 +258,7 @@ class Api
      */
     public function getProcessInfo($name)
     {
-        return $this->_call('getProcessInfo', [$name]);
+        $this->__call('getProcessInfo', [$name]);
     }
 
     /**
@@ -272,7 +272,7 @@ class Api
      */
     public function getAllProcessInfo()
     {
-        return $this->_call('getAllProcessInfo');
+        $this->__call('getAllProcessInfo');
     }
 
     /**
@@ -285,7 +285,7 @@ class Api
      */
     public function startProcess($name, $wait = true)
     {
-        return $this->_call('startProcess', [$name, $wait]);
+        $this->__call('startProcess', [$name, $wait]);
     }
 
     /**
@@ -298,7 +298,7 @@ class Api
      */
     public function stopProcess($name, $wait = true)
     {
-        return $this->_call('stopProcess', [$name, $wait]);
+        return $this->__call('stopProcess', [$name, $wait]);
     }
 
     /**
@@ -311,7 +311,7 @@ class Api
      */
     public function startProcessGroup($name, $wait = true)
     {
-        return $this->_call('startProcessGroup', [$name, $wait]);
+        $this->__call('startProcessGroup', [$name, $wait]);
     }
 
     /**
@@ -324,7 +324,7 @@ class Api
      */
     public function stopProcessGroup($name, $wait = true)
     {
-        return $this->_call('stopProcessGroup', [$name, $wait]);
+        $this->__call('stopProcessGroup', [$name, $wait]);
     }
 
     /**
@@ -336,7 +336,7 @@ class Api
      */
     public function startAllProcesses($wait = true)
     {
-        return $this->_call('startAllProcesses', [$wait]);
+        $this->__call('startAllProcesses', [$wait]);
     }
 
     /**
@@ -348,7 +348,7 @@ class Api
      */
     public function stopAllProcesses($wait = true)
     {
-        return $this->_call('stopAllProcesses', [$wait]);
+        $this->__call('stopAllProcesses', [$wait]);
     }
 
     /**
@@ -365,7 +365,7 @@ class Api
      */
     public function sendProcessStdin($name, $chars)
     {
-        return $this->_call('sendProcessStdin', [$name, $chars]);
+        $this->__call('sendProcessStdin', [$name, $chars]);
     }
 
     /**
@@ -378,7 +378,7 @@ class Api
      */
     public function sendRemoteCommEvent($type, $data)
     {
-        return $this->_call('sendRemoteCommEvent', [$type, $data]);
+        $this->__call('sendRemoteCommEvent', [$type, $data]);
     }
 
     /**
@@ -390,7 +390,7 @@ class Api
      */
     public function addProcessGroup($name)
     {
-        return $this->_call('addProcessGroup', [$name]);
+        $this->__call('addProcessGroup', [$name]);
     }
 
     /**
@@ -402,7 +402,7 @@ class Api
      */
     public function removeProcessGroup($name)
     {
-        return $this->_call('removeProcessGroup', [$name]);
+        return $this->__call('removeProcessGroup', [$name]);
     }
 
     /**
@@ -416,7 +416,7 @@ class Api
      */
     public function readProcessStdoutLog($name, $offset, $length)
     {
-        return $this->_call('readProcessStdoutLog', [$name, $offset, $length]);
+        $this->__call('readProcessStdoutLog', [$name, $offset, $length]);
     }
 
     /**
@@ -430,7 +430,7 @@ class Api
      */
     public function readProcessStderrLog($name, $offset, $length)
     {
-        return $this->_call('readProcessStderrLog', [$name, $offset, $length]);
+        $this->__call('readProcessStderrLog', [$name, $offset, $length]);
     }
 
     /**
@@ -450,7 +450,7 @@ class Api
      */
     public function tailProcessStdoutLog($name, $offset, $length)
     {
-        return $this->_call('tailProcessStdoutLog', [$name, $offset, $length]);
+        $this->__call('tailProcessStdoutLog', [$name, $offset, $length]);
     }
 
     /**
@@ -470,7 +470,7 @@ class Api
      */
     public function tailProcessStderrLog($name, $offset, $length)
     {
-        return $this->_call('tailProcessStderrLog', [$name, $offset, $length]);
+        $this->__call('tailProcessStderrLog', [$name, $offset, $length]);
     }
 
     /**
@@ -482,7 +482,7 @@ class Api
      */
     public function clearProcessLogs($name)
     {
-        return $this->_call('clearProcessLogs', $name);
+        $this->__call('clearProcessLogs', $name);
     }
 
     /**
@@ -493,7 +493,7 @@ class Api
      */
     public function clearAllProcessLogs()
     {
-        return $this->_call('clearAllProcessLogs');
+        $this->__call('clearAllProcessLogs');
     }
 
     /**
@@ -504,7 +504,7 @@ class Api
      */
     public function listMethods()
     {
-        return $this->_call('system.listMethods');
+        $this->__call('system.listMethods');
     }
 
     /**
@@ -516,7 +516,7 @@ class Api
      */
     public function methodHelp($name)
     {
-        return $this->_call('system.methodHelp', ['supervisor.' . $name]);
+        $this->__call('system.methodHelp', ['supervisor.' . $name]);
     }
 
     /**
@@ -529,7 +529,7 @@ class Api
      */
     public function methodSignature($name)
     {
-        return $this->_call('system.methodSignature', ['supervisor.' . $name]);
+        $this->__call('system.methodSignature', ['supervisor.' . $name]);
     }
 
     /**
@@ -544,7 +544,7 @@ class Api
      */
     public function multicall(array $calls)
     {
-        return $this->_call('system.multicall', [$calls]);
+        $this->__call('system.multicall', [$calls]);
     }
 
 }
