@@ -8,7 +8,7 @@ Installation
 Define the following requirement in your composer.json file:
 ```
 "require": {
-    "ihor/supervisor-xml-rpc": "~0.1"
+    "ihor/supervisor-xml-rpc": "~0.2"
 }
 ```
 
