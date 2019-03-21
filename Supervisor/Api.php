@@ -7,7 +7,7 @@ class Api
     /**
      * @var string
      */
-    private $url = '';
+    protected $url = '';
 
     /**
      * @var array
