@@ -258,7 +258,7 @@ class Api
      */
     public function getProcessInfo($name)
     {
-        $this->__call('getProcessInfo', [$name]);
+        return $this->__call('getProcessInfo', [$name]);
     }
 
     /**
@@ -272,7 +272,7 @@ class Api
      */
     public function getAllProcessInfo()
     {
-        $this->__call('getAllProcessInfo');
+        return $this->__call('getAllProcessInfo');
     }
 
     /**
