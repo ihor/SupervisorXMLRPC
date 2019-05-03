@@ -153,7 +153,7 @@ class Api
      */
     public function getPid()
     {
-        $this->__call('getPID');
+        return $this->__call('getPID');
     }
 
     /**
@@ -183,7 +183,7 @@ class Api
      */
     public function readLog($offset, $length)
     {
-        $this->__call('readLog', [$offset, $length]);
+        return $this->__call('readLog', [$offset, $length]);
     }
 
     /**
@@ -197,7 +197,7 @@ class Api
      */
     public function clearLog()
     {
-        $this->__call('clearLog');
+        return $this->__call('clearLog');
     }
 
     /**
@@ -213,7 +213,7 @@ class Api
      */
     public function shutdown()
     {
-        $this->__call('shutdown');
+        return $this->__call('shutdown');
     }
 
     /**
@@ -230,7 +230,7 @@ class Api
      */
     public function restart()
     {
-        $this->__call('restart');
+        return $this->__call('restart');
     }
 
     /**
@@ -285,7 +285,7 @@ class Api
      */
     public function startProcess($name, $wait = true)
     {
-        $this->__call('startProcess', [$name, $wait]);
+        return $this->__call('startProcess', [$name, $wait]);
     }
 
     /**
@@ -311,7 +311,7 @@ class Api
      */
     public function startProcessGroup($name, $wait = true)
     {
-        $this->__call('startProcessGroup', [$name, $wait]);
+        return $this->__call('startProcessGroup', [$name, $wait]);
     }
 
     /**
@@ -324,7 +324,7 @@ class Api
      */
     public function stopProcessGroup($name, $wait = true)
     {
-        $this->__call('stopProcessGroup', [$name, $wait]);
+        return $this->__call('stopProcessGroup', [$name, $wait]);
     }
 
     /**
@@ -336,7 +336,7 @@ class Api
      */
     public function startAllProcesses($wait = true)
     {
-        $this->__call('startAllProcesses', [$wait]);
+        return $this->__call('startAllProcesses', [$wait]);
     }
 
     /**
@@ -348,7 +348,7 @@ class Api
      */
     public function stopAllProcesses($wait = true)
     {
-        $this->__call('stopAllProcesses', [$wait]);
+        return $this->__call('stopAllProcesses', [$wait]);
     }
 
     /**
@@ -365,7 +365,7 @@ class Api
      */
     public function sendProcessStdin($name, $chars)
     {
-        $this->__call('sendProcessStdin', [$name, $chars]);
+        return $this->__call('sendProcessStdin', [$name, $chars]);
     }
 
     /**
@@ -378,7 +378,7 @@ class Api
      */
     public function sendRemoteCommEvent($type, $data)
     {
-        $this->__call('sendRemoteCommEvent', [$type, $data]);
+        return $this->__call('sendRemoteCommEvent', [$type, $data]);
     }
 
     /**
@@ -390,7 +390,7 @@ class Api
      */
     public function addProcessGroup($name)
     {
-        $this->__call('addProcessGroup', [$name]);
+        return $this->__call('addProcessGroup', [$name]);
     }
 
     /**
@@ -416,7 +416,7 @@ class Api
      */
     public function readProcessStdoutLog($name, $offset, $length)
     {
-        $this->__call('readProcessStdoutLog', [$name, $offset, $length]);
+        return $this->__call('readProcessStdoutLog', [$name, $offset, $length]);
     }
 
     /**
@@ -430,7 +430,7 @@ class Api
      */
     public function readProcessStderrLog($name, $offset, $length)
     {
-        $this->__call('readProcessStderrLog', [$name, $offset, $length]);
+        return $this->__call('readProcessStderrLog', [$name, $offset, $length]);
     }
 
     /**
@@ -450,7 +450,7 @@ class Api
      */
     public function tailProcessStdoutLog($name, $offset, $length)
     {
-        $this->__call('tailProcessStdoutLog', [$name, $offset, $length]);
+        return $this->__call('tailProcessStdoutLog', [$name, $offset, $length]);
     }
 
     /**
@@ -470,7 +470,7 @@ class Api
      */
     public function tailProcessStderrLog($name, $offset, $length)
     {
-        $this->__call('tailProcessStderrLog', [$name, $offset, $length]);
+        return $this->__call('tailProcessStderrLog', [$name, $offset, $length]);
     }
 
     /**
@@ -482,7 +482,7 @@ class Api
      */
     public function clearProcessLogs($name)
     {
-        $this->__call('clearProcessLogs', $name);
+        return $this->__call('clearProcessLogs', $name);
     }
 
     /**
@@ -493,7 +493,7 @@ class Api
      */
     public function clearAllProcessLogs()
     {
-        $this->__call('clearAllProcessLogs');
+        return $this->__call('clearAllProcessLogs');
     }
 
     /**
@@ -504,7 +504,7 @@ class Api
      */
     public function listMethods()
     {
-        $this->__call('system.listMethods');
+        return $this->__call('system.listMethods');
     }
 
     /**
@@ -516,7 +516,7 @@ class Api
      */
     public function methodHelp($name)
     {
-        $this->__call('system.methodHelp', ['supervisor.' . $name]);
+        return $this->__call('system.methodHelp', ['supervisor.' . $name]);
     }
 
     /**
@@ -529,7 +529,7 @@ class Api
      */
     public function methodSignature($name)
     {
-        $this->__call('system.methodSignature', ['supervisor.' . $name]);
+        return $this->__call('system.methodSignature', ['supervisor.' . $name]);
     }
 
     /**
@@ -544,7 +544,7 @@ class Api
      */
     public function multicall(array $calls)
     {
-        $this->__call('system.multicall', [$calls]);
+        return $this->__call('system.multicall', [$calls]);
     }
 
 }
